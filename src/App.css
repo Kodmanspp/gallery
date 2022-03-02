@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Roboto&display=swap');
+
+:root{
+    --header_var: 20px;
+}
+body{
+    padding: 0% 10% 0% 10%;
+}
+.header{
+    display: grid;
+    grid-template-columns: minmax(auto, 200px) 1fr;
+    grid-template-rows: 104px;
+    align-items: center;
+}
+.header__title{
+    font-family: 'Corinthia', "cursive";
+}
+.links{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(auto, 100px));
+    align-items: center;
+}
+.nav-link{
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #737373;
+}
+.active{
+    color: #23A6F0;
+}
+
+
+@media (max-width: 1025px) {
+    .header__title{
+        font-size: 25px;
+    }
+}
+@media (max-width: 700px) {
+    .header{
+        display: block;
+        height: 90px;
+    }
+}
+@media (max-width: 550px) {
+    .header__title{
+        width: 200px;
+    }
+    .nav-link{
+        font-size: 18px;
+        margin-left: -13px;
+    }
+    .links{
+        font-size: 15px;
+        grid-template-columns: repeat(6, minmax(auto, 70px));
+    }
+}
